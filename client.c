@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     struct timeval tv;
 
     tv.tv_sec = timeout;
+    tv.tv_usec = 0;
 
     server = gethostbyname(host);
     bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
